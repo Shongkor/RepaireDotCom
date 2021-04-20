@@ -13,7 +13,7 @@ const HomeNavbar = () => {
     const [admin, setAdmin] = useState([])
 
     useEffect(() => {
-        fetch("http://localhost:5055/admin")
+        fetch("https://mysterious-woodland-64195.herokuapp.com/admin")
             .then(res => res.json())
             .then(data => {
                 const myData = data.filter(d => d.email === loggedInUser.email)

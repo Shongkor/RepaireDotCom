@@ -5,7 +5,7 @@ import './Contact.css'
 export default function App() {
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-    fetch('http://localhost:5055/subscribe', {
+    fetch('https://mysterious-woodland-64195.herokuapp.com/subscribe', {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(data),

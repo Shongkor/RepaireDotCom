@@ -15,7 +15,7 @@ const AddService = () => {
     const onSubmit = data => {
         const newData = { ...data, ...imgURL }
         // console.log(newData)
-        fetch('http://localhost:5055/addService', {
+        fetch('https://mysterious-woodland-64195.herokuapp.com/addService', {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newData),

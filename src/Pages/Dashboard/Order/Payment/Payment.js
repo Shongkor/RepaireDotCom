@@ -12,8 +12,8 @@ const Payment = ({handleCheckOut}) => {
         <div className="text-center">
             <Elements stripe={stripePromise}>
 
-<SimpleCardForm handleCheckOut={handleCheckOut}></SimpleCardForm>
-</Elements>
+            <SimpleCardForm handleCheckOut={handleCheckOut}></SimpleCardForm>
+            </Elements>
         </div>
     );
 };

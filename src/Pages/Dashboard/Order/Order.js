@@ -12,7 +12,7 @@ const Order = () => {
     const [selectedService, setSelectedService] = useState({});
 
     useEffect(() => {
-        fetch("http://localhost:5055/services")
+        fetch("https://mysterious-woodland-64195.herokuapp.com/services")
             .then(res => res.json())
             .then(data => {
                 const singleService = data.find(data => data._id === id);
@@ -35,7 +35,7 @@ const Order = () => {
             paymentId,
             orderTime : new Date(),
          }
-        fetch("http://localhost:5055/pay", {
+        fetch("https://mysterious-woodland-64195.herokuapp.com/pay", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
