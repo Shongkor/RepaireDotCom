@@ -1,14 +1,12 @@
 import React from 'react';
-import { useContext } from 'react';
 import { useState, useEffect } from 'react';
-import { UserContext } from '../../../App'
 
 
 const AdminOrderList = () => {
     const [placedOrder, setPlacedOrder] = useState([]);
 
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/orders")
+        fetch("http://localhost:5055/orders")
             .then(res => res.json())
             .then(data => {
 

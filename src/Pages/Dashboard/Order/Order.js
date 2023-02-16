@@ -12,7 +12,7 @@ const Order = () => {
     const [selectedService, setSelectedService] = useState({});
 
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/services")
+        fetch("http://localhost:5055/services")
             .then(res => res.json())
             .then(data => {
                 const singleService = data.find(data => data._id === id);

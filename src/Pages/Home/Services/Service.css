@@ -1,3 +1,7 @@
 .serviceBG{
-    background-color: aqua;
+    background-color: #feffff;
+}
+
+.CardStyle{
+  box-shadow: 2px 2px 2px 2px rgb(163, 157, 157);
 }
