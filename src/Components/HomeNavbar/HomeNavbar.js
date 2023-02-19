@@ -1,8 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
-import logo from '../../Images/fixoria.png'
-import Admin from '../../Pages/Admin/Admin';
+import logo from '../../Images/fixoria.png';
 import './HomeNavbar.css'
 
 
@@ -11,9 +10,15 @@ const HomeNavbar = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [admin, setAdmin] = useState([])
-
+    const handleLogOut =()=>{
+        if(loggedInUser.email){
+                        
+            setLoggedInUser(loggedInUser.email = '');
+            console.log(loggedInUser.email);
+        }
+    }
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/admin")
+        fetch("http://localhost:5055/admin")
             .then(res => res.json())
             .then(data => {
                 const myData = data.filter(d => d.email === loggedInUser.email)
@@ -51,8 +56,14 @@ const HomeNavbar = () => {
                                         <Link className="nav-link" to="/dashboard">Dashboard</Link>
                                 }
                             </li>
-                            <li className="nav-item">
-                                <Link className="nav-link" to='/login'>{loggedInUser.email ? <button className='btn btn-dark'>{loggedInUser.name}</button> : <button className='btn btn-dark'>{'Log In'}</button>}</Link>
+                            <li className="nav-item LogInOut" onClick = {
+                        handleLogOut
+                    }>
+                                <Link className="nav-link" to='/login'>
+                                    {loggedInUser.email ? 
+                                    <li className='nav-item'>{"Log Out"}</li> 
+                                    : <li className='nav-item'>{"Log In"}</li>}
+                                </Link>
                             </li>
 
                         </ul>

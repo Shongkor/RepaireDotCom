@@ -15,7 +15,7 @@ const AddReview = () => {
     const onSubmit = data => {
         const newData = { ...data, ...imgURL }
         // console.log(newData)
-        fetch('https://mysterious-woodland-64195.herokuapp.com/addReview', {
+        fetch('http://localhost:5055/addReview', {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newData),

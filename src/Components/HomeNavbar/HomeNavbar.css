@@ -3,3 +3,8 @@
     font-size: large;
     font-weight: 500;
 }
+.LogInOut a{
+    background-color: aliceblue;
+    padding-right: 20px !important;
+    border-radius: 30%;
+}

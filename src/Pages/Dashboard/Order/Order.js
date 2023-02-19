@@ -12,12 +12,13 @@ const Order = () => {
     const [selectedService, setSelectedService] = useState({});
 
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/services")
+        fetch("http://localhost:5055/services")
             .then(res => res.json())
             .then(data => {
                 const singleService = data.find(data => data._id === id);
                 console.log(singleService)
                 // const newSelectedProduct = [...selectedProduct, singleProduct]
+                delete singleService._id
                 setSelectedService(singleService);
             })
     }, [])
@@ -35,7 +36,7 @@ const Order = () => {
             paymentId,
             orderTime : new Date(),
          }
-        fetch("https://mysterious-woodland-64195.herokuapp.com/pay", {
+        fetch("http://localhost:5055/pay", {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useForm } from "react-hook-form";
 import AdminNavbar from '../../../Components/AdminNavbar/AdminNavbar';
 
@@ -13,7 +13,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         const newData = { ...data }
         // console.log(newData)
-        fetch('https://mysterious-woodland-64195.herokuapp.com/addAdmin', {
+        fetch('http://localhost:5055/addAdmin', {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newData),

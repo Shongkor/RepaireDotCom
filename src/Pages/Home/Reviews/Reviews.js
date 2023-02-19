@@ -8,7 +8,7 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/reviews")
+        fetch("http://localhost:5055/reviews")
             .then(res => res.json())
             .then(data => {
                 setReviews(data)
@@ -22,12 +22,13 @@ const Reviews = () => {
                 {
                     reviews.map(re => (
                         <div className="col-md-4 my-5">
-                            <div className="card" style={{ width: '18rem' }}>
-                                <img src={re.image_url} className="card-img-top" alt="..." />
+                            <div className="card align-items-center" style={{ width: '18rem', height: "25rem" }}>
+                                <div>
+                                <img src={re.image_url} style={{ width: '18rem', height: "15rem" }} className="card-img-top" alt="..." />
+                                </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{re.name}</h5>
                                     <p className="card-text">{re.description}</p>
-                                    
                                 </div>
                             </div>
                         </div>
