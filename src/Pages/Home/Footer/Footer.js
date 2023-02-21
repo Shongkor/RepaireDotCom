@@ -29,8 +29,8 @@ function Footer() {
           <div className="col">
             <h4 className="mx-auto">Services Links</h4>
             <ui className="list-unstyled">
-              <li><Link path="/service">Services</Link></li>
-              <Link path="/review">Review</Link>
+              <li><Link to="/services">Services</Link></li>
+              <Link to="/review">Review</Link>
               
             </ui>
           </div>

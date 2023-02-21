@@ -67,13 +67,7 @@
 } */
 
 
-.loginStyle{
-    margin: 40px 175px 0px 175px;
-    padding: 20px;
-    background-color: #ffff;
-    box-shadow: rgb(0 0 0 / 20%) 2px 1px 10px 5px;
-    border-radius: 20px;
-}
+
 .inputField{
     height: 40px;
     width: 60%;

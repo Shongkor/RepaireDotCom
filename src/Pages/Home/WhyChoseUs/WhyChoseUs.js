@@ -7,10 +7,10 @@ import './WhyChoseUs.css'
 
 const WhyChoseUs = () => {
     return (
-        <section class="section section-lg text-center component-Bg my-5 py-3">
+        <section class="section section-lg text-center component-Bg my-5 py-5">
             <div class="container">
                 <h2 class="text-divider"><span class="text-divider-item"></span>Why Choose Us</h2>
-                <p><span class="d-inline-block" style={{ width: "550px" }}>There are dozens of reasons why our clients choose Fixoria as their computer service provider of choice.</span></p>
+                <p className='my-2'><span class="d-inline-block">There are dozens of reasons why our clients choose Fixoria as their computer service provider of choice.</span></p>
                 <div class="row row-30 justify-content-center text-lg-left">
                     <div class="col-sm-6 col-md-4  my-5">
 

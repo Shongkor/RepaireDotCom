@@ -97,8 +97,8 @@ const SignUp = () => {
             
             <div className=''>
                 <HomeNavbar />
-                <div className="text-center regFormColor py-5">
-                    <h1 className='signUp'> <img src="./sign-up-icon-5.png" alt="icon" className='signUpImg'/> Sign Up </h1>
+                <div className="text-center regFormColor py-3">
+                    <h3 className='signUp'> <img src="./sign-up-icon-5.png" alt="icon" className='signUpImg'/> Sign Up </h3>
 
                 <form onSubmit={handleCreateAccount}>
                     <input className="inputField" type="text" name="name" onBlur={handleBlur} placeholder='Enter your Name' required />
@@ -109,7 +109,7 @@ const SignUp = () => {
                     <br />
                     <input className="inputField" type="password" name="confirmPassword" onBlur={handleBlur} placeholder="Confirm password" required />
                     <br />
-                    <input className="inputField createAccountBtn" type="submit" value="Create Account" />
+                    <input className="btn btn-outline-primary inputField" type="submit" value="Create Account" />
                 </form>
                 <p className="text-danger">{user.error}</p>
                 {user.succes && <div><p className="success">User created successfully </p> <b> <Link className="link" to='/log-in'> Click Here To LogIn </Link> </b></div>}
@@ -119,7 +119,7 @@ const SignUp = () => {
                 <p className = "text-primary" >
                     Or
                 </p>
-                <button className="btn btn-primary"onClick={handleGoogleSignIn}><FaGoogle className="google"></FaGoogle>Continue with Google</button>
+                <button className="btn btn-outline-success" onClick={handleGoogleSignIn}><FaGoogle className="google"></FaGoogle> Google Sign in</button>
             </div>
             </div>
             </div>

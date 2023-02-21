@@ -14,9 +14,9 @@ const Services = () => {
             })
     }, [])
     return (
-        <div className="serviceBG py-5">
+        <div className="serviceBG py-1">
             <div className="container">
-            <h1 className="text-center my-5">Our Services</h1>
+            <h2 className="text-center mt-4">Our Services</h2>
             <div className="row flex-wrap justify-content-between">
                 {
                     services.map(sr => <Service service={sr}></Service>)
