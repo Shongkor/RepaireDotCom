@@ -21,9 +21,15 @@ const Reviews = () => {
                 {
                     reviews.map(re => (
                         <div className="col-md-4 my-5">
+<<<<<<< HEAD
                             <div className="card align-items-center" style={{height: "25rem" }}>
                                 <div>
                                 <img src={re.image_url} style={{ height: "15rem" }} className="card-img-top" alt="..." />
+=======
+                            <div className="card align-items-center" style={{ width: '18rem', height: "25rem" }}>
+                                <div>
+                                <img src={re.image_url} style={{ width: '18rem', height: "15rem" }} className="card-img-top" alt="..." />
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{re.name}</h5>

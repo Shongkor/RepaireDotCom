@@ -88,8 +88,13 @@ const LogIn = () => {
                 var errorMessage = error.message;
                 var email = error.email;
                 var credential = error.credential;
+<<<<<<< HEAD
                 console.log(errorMessage,errorCode,email,credential)
 
+=======
+                // ...
+                console.log("LogIn Fail",errorCode,errorMessage,email,credential);
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
             });
 
     }

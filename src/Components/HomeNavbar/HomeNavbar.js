@@ -1,7 +1,10 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
+<<<<<<< HEAD
 import { CgProfile } from 'react-icons/cg';
+=======
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
 import logo from '../../Images/fixoria.png';
 import './HomeNavbar.css'
 
@@ -53,6 +56,7 @@ const HomeNavbar = () => {
                                         <Link className="nav-link" to="/dashboard">Dashboard</Link>
                                 }
                             </li>
+<<<<<<< HEAD
                             <li class="dropdown LogInOut nav-item">
                                 <li class="" data-toggle="dropdown">
                                     <CgProfile />
@@ -69,6 +73,14 @@ const HomeNavbar = () => {
                                     </li>
                                     { loggedInUser.email &&<li className='nav-item'><Link className="nav-link" to='/add-review'>Add Reviews</Link></li>}
                                 </ul>
+=======
+                            <li className="nav-item LogInOut">
+                                <Link className="nav-link" to='/login'>
+                                    {loggedInUser.email ? 
+                                    <li className='nav-item'>{"Log Out"}</li> 
+                                    : <li className='nav-item'>{"Log In"}</li>}
+                                </Link>
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
                             </li>
                             
 

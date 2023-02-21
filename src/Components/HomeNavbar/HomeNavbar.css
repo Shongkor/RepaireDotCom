@@ -3,8 +3,16 @@
     font-size: large;
     font-weight: 500;
 }
+<<<<<<< HEAD
 /* .LogInOut a{
     background-color: aliceblue;
     padding-right: 20px !important;
     border-radius: 30%;
 } */
+=======
+.LogInOut a{
+    background-color: aliceblue;
+    padding-right: 20px !important;
+    border-radius: 30%;
+}
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896

@@ -6,11 +6,18 @@ import {
 } from "react-router-dom";
 const Home = lazy(() => import('./Pages/Home/Home'));
 const ServicesPage = lazy(() => import('./Pages/Dashboard/ServicesPage/ServicesPage.js'));
+<<<<<<< HEAD
 const ReviewPage = lazy(() => import('./Pages/ReviewPage/ReviewPage'));
 const AddReview = lazy(() => import('./Pages/Dashboard/AddReview/AddReview'));
 const WhyChoseUs = lazy(() => import('./Pages/Home/WhyChoseUs/WhyChoseUs'));
 const LogIn = lazy(() => import('./Pages/LogIn/LogIn'));
 const SignUp = lazy(() => import('./Pages/SignUp/SignUp'));
+=======
+const Reviews = lazy(() => import('./Pages/Home/Reviews/Reviews'));
+const AddReview = lazy(() => import('./Pages/Dashboard/AddReview/AddReview'));
+const WhyChoseUs = lazy(() => import('./Pages/Home/WhyChoseUs/WhyChoseUs'));
+const LogIn = lazy(() => import('./Pages/LogIn/LogIn'));
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
 const PrivateRoute = lazy(() => import('./Components/PrivateRoute/PrivateRoute'));
 const Dashboard = lazy(() => import('./Pages/Dashboard/Dashboard'));
 const Order = lazy(() => import('./Pages/Dashboard/Order/Order'));
@@ -45,18 +52,33 @@ function App() {
             <Route path='/services'>
               <ServicesPage></ServicesPage>
             </Route>
+<<<<<<< HEAD
+=======
+            <Route path='/reviews'>
+              <Reviews></Reviews>
+            </Route>
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
             <PrivateRoute path="/admin">
               <Admin></Admin>
             </PrivateRoute>
             <PrivateRoute path="/admin/orderList">
               <AdminOrderList></AdminOrderList>
             </PrivateRoute>
+<<<<<<< HEAD
             <PrivateRoute path='/addService'>
               <AddService></AddService>
             </PrivateRoute>
             <PrivateRoute path="/addAdmin">
               <MakeAdmin></MakeAdmin>
             </PrivateRoute>
+=======
+            <Route path='/addService'>
+              <AddService></AddService>
+            </Route>
+            <Route path="/addAdmin">
+              <MakeAdmin></MakeAdmin>
+            </Route>
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
 
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
@@ -64,6 +86,7 @@ function App() {
             <Route path='/serviceList'>
               <Book></Book>
             </Route>
+<<<<<<< HEAD
             <PrivateRoute path='/add-review'>
               <AddReview></AddReview>
             </PrivateRoute>
@@ -82,6 +105,20 @@ function App() {
             <PrivateRoute path="/checkOut">
               <Payment></Payment>
             </PrivateRoute>
+=======
+            <Route path='/review'>
+              <AddReview></AddReview>
+            </Route>
+            <Route path='/whyChoseUs'>
+              <WhyChoseUs></WhyChoseUs>
+            </Route>
+            <Route path="/Login">
+              <LogIn></LogIn>
+            </Route>
+            <Route path="/checkOut">
+              <Payment></Payment>
+            </Route>
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
 
 
 
