@@ -3,9 +3,9 @@ import { useForm } from "react-hook-form";
 import './Contact.css'
 
 export default function App() {
-  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const onSubmit = data => {
-    fetch('https://mysterious-woodland-64195.herokuapp.com/subscribe', {
+    fetch('http://localhost:3000/subscribe', {
         method: "POST",
         headers: { "Content-type": "application/json" },
         body: JSON.stringify(data),

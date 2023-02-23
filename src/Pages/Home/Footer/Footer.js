@@ -4,17 +4,17 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <div className="main-footer">
+    <div className="main-footer bg-light">
       <div className="container">
         <div className="row">
           {/* Column1 */}
           <div className="col">
             <h4>Repaire Dot Com</h4>
-            <h5 className="list-unstyled">
+            <h6 className="list-unstyled">
               <li>342-420-6969</li>
               <li>Dhaka, Bangladesh</li>
               <li>183/21 Mohakhali Dhaka</li>
-            </h5>
+            </h6>
           </div>
           {/* Column2 */}
           <div className="col">
@@ -29,8 +29,8 @@ function Footer() {
           <div className="col">
             <h4 className="mx-auto">Services Links</h4>
             <ui className="list-unstyled">
-              <li><Link path="/service">Services</Link></li>
-              <Link path="/review">Review</Link>
+              <li><Link to="/services">Services</Link></li>
+              <Link to="/review">Review</Link>
               
             </ui>
           </div>

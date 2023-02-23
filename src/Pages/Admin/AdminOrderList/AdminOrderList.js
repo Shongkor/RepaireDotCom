@@ -23,8 +23,8 @@ const AdminOrderList = () => {
     return (
         <div>
 
-            <div className="container mt-5 pt-3">
-                <h3>Placed-Order List</h3>
+            <div className="container mb-3 pt-3">
+                <h3 className='text-center my-5'>Placed-Order List</h3>
                 <table className="table">
                     <thead id='thead' className="bg-light">
                         <tr>

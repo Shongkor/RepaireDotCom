@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import Navbar from '../../../Components/HomeNavbar/HomeNavbar';
-import DashboardNavbar from '../../../Components/DashboardNavbar/DashboardNavbar';
 
 
 
@@ -50,43 +48,33 @@ const AddReview = () => {
     }
 
     return (
-        <div>
-            <div>
+        <div className='my-5'>
+            <div className="container">
                 <div className="">
+                    <div className="mt-3">
+                        <h3 className="text-center">Add Review Here</h3>
+                        <div>
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <label><strong>Name</strong> </label>
+                                <input className="form-control" type="text" {...register("name")} placeholder="Name" />
 
-                    <div className="row">
-                        <div className="col-md-3">
-                            <DashboardNavbar></DashboardNavbar>
-                        </div>
-                        <div className="container">
-                            <div className="col-md-9">
-                                <div className="mt-3">
-                                    <h1 className="text-center">Add Service Here</h1>
-                                    <div>
-                                        <form onSubmit={handleSubmit(onSubmit)}>
-                                            <label><strong>Name</strong> </label>
-                                            <input className="form-control" type="text" {...register("name")} placeholder="Name" />
+                                <label className="mt-3"><strong>Description</strong> </label>
+                                <input className="form-control" type="text" {...register("description", { required: true })} placeholder="Description of the review" />
 
-                                            <label className="mt-3"><strong>Description</strong> </label>
-                                            <input className="form-control" type="text" {...register("description", { required: true })} placeholder="Description of the Service" />
-
-                                            <label className="mt-3"><strong>Image</strong></label>
-                                            <input type='file' onChange={handleImage} />
+                                <label className="mt-3"><strong>Image: </strong></label>
+                                <input type='file' onChange={handleImage} />
 
 
-                                            {errors.exampleRequired && <span style={{ color: "red" }}>This field is required</span>}
+                                {errors.exampleRequired && <span style={{ color: "red" }}>This field is required</span>}
 
-                                            <input className="form-control btn-success mt-5" type="submit" />
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
+                                <input className="form-control btn-success mt-5" type="submit" />
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
+
 
     );
 };

@@ -1,0 +1,7 @@
+.sidebar {
+    background-color:#feffff;
+    height: 100%;
+    overflow: scroll;
+    text-align: left;
+    box-shadow: #2C3E50;
+  }

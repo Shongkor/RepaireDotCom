@@ -4,9 +4,11 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import HomeNavbar from "./Components/HomeNavbar/HomeNavbar";
+import Footer from "./Pages/Home/Footer/Footer";
 const Home = lazy(() => import('./Pages/Home/Home'));
 const ServicesPage = lazy(() => import('./Pages/Dashboard/ServicesPage/ServicesPage.js'));
-const Reviews = lazy(() => import('./Pages/Home/Reviews/Reviews'));
+const ReviewPage = lazy(() => import('./Pages/ReviewPage/ReviewPage'));
 const AddReview = lazy(() => import('./Pages/Dashboard/AddReview/AddReview'));
 const WhyChoseUs = lazy(() => import('./Pages/Home/WhyChoseUs/WhyChoseUs'));
 const LogIn = lazy(() => import('./Pages/LogIn/LogIn'));
@@ -38,15 +40,14 @@ function App() {
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <Router>
         <Suspense fallback={<h1>Loading...</h1>}>
+          <HomeNavbar />
           <Switch>
+            
             <Route path='/home'>
               <Home></Home>
             </Route>
             <Route path='/services'>
               <ServicesPage></ServicesPage>
-            </Route>
-            <Route path='/reviews'>
-              <Reviews></Reviews>
             </Route>
             <PrivateRoute path="/admin">
               <Admin></Admin>
@@ -67,11 +68,14 @@ function App() {
             <Route path='/serviceList'>
               <Book></Book>
             </Route>
-            <PrivateRoute path='/review'>
+            <PrivateRoute path='/add-review'>
               <AddReview></AddReview>
             </PrivateRoute>
             <Route path='/whyChoseUs'>
               <WhyChoseUs></WhyChoseUs>
+            </Route>
+            <Route path='/reviews'>
+              <ReviewPage></ReviewPage>
             </Route>
             <Route path="/Login">
               <LogIn></LogIn>
@@ -96,6 +100,7 @@ function App() {
               <Home></Home>
             </Route>
           </Switch>
+          <Footer />
         </Suspense>
       </Router>
     </UserContext.Provider>

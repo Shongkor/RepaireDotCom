@@ -50,12 +50,12 @@ const AddService = () => {
 
     return (
         <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-2">
                 <AdminNavbar></AdminNavbar>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-10">
                 <div className="mt-3">
-                    <h1 className="text-center">Add Service Here</h1>
+                    <h2 className="text-center">Add Service Here</h2>
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label><strong>Service Name</strong> </label>

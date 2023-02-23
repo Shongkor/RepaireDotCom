@@ -3,7 +3,6 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { UserContext } from '../../../App';
-import DashboardNavbar from '../../../Components/DashboardNavbar/DashboardNavbar';
 
 
 const OrdersList = () => {
@@ -20,35 +19,32 @@ const OrdersList = () => {
             })
     }, [loggedInUser.email])
     return (
-        <div className="row">
-            <div className="col-md-3">
-                <DashboardNavbar></DashboardNavbar>
-            </div>
-            <div className="col-md-9">
-                <div>
-                    <h4>Dear <span className='Name'>{loggedInUser.name}</span>,</h4>
-                    <h4>It's your Orders History</h4>
-                    <div className="container">
-                        <div className="row">
-                            {
-                                orderLists.map(order => (
-                                    <div className="col-md-4">
-                                        <div className="card" style={{ width: '18rem' }}>
-                                            <img src={order.image_url} className="card-img-top" alt="..." />
-                                            <div className="card-body">
-                                                <h5 className="card-title">{order.service}</h5>
-                                                <p className="card-text">{order.description}</p>
-                                                <p>{order.price}</p>
-                                            </div>
-                                        </div>
+
+        <div>
+            <h6 className='text-center my-5'>{loggedInUser.name} Orders History</h6>
+            <div className="container my-5">
+                <div className="row">
+                    {
+                        orderLists.map(order => (
+                            <div className="col-md-4 text-center">
+                                <div className="card">
+                                    <img src={order.image_url} className="card-img-top" alt="..." />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{order.service}</h5>
+                                        <p className="card-text">{order.description}</p>
+                                        <p>{order.price} TK</p>
                                     </div>
-                                ))
-                            }
-                        </div>
-                    </div>
+                                    <div className='card-footer'>
+                                        <p>Booking Date : {order.orderTime}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
+
     );
 };
 

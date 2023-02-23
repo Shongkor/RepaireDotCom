@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import './Review.css'
 
 
@@ -15,16 +14,16 @@ const Reviews = () => {
             })
     }, [])
     return (
-        <div className="reviewBg mb-5 pt-3">
+        <div className="reviewBg mb-3 p-3">
             <div className="container">
-            <h1 className="text-center my-5">Latest Reviews</h1>
+            <h2 className="text-center mt-5 mb-3" id="review">Latest Reviews</h2>
             <div className="row">
                 {
                     reviews.map(re => (
                         <div className="col-md-4 my-5">
-                            <div className="card align-items-center" style={{ width: '18rem', height: "25rem" }}>
+                            <div className="card align-items-center" style={{height: "25rem" }}>
                                 <div>
-                                <img src={re.image_url} style={{ width: '18rem', height: "15rem" }} className="card-img-top" alt="..." />
+                                <img src={re.image_url} style={{ height: "15rem" }} className="card-img-top" alt="..." />
                                 </div>
                                 <div className="card-body">
                                     <h5 className="card-title">{re.name}</h5>
