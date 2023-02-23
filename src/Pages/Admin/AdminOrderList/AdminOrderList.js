@@ -1,14 +1,12 @@
 import React from 'react';
-import { useContext } from 'react';
 import { useState, useEffect } from 'react';
-import { UserContext } from '../../../App'
 
 
 const AdminOrderList = () => {
     const [placedOrder, setPlacedOrder] = useState([]);
 
     useEffect(() => {
-        fetch("https://mysterious-woodland-64195.herokuapp.com/orders")
+        fetch("http://localhost:5055/orders")
             .then(res => res.json())
             .then(data => {
 
@@ -25,8 +23,8 @@ const AdminOrderList = () => {
     return (
         <div>
 
-            <div className="container mt-5 pt-3">
-                <h3>Placed-Order List</h3>
+            <div className="container mb-3 pt-3">
+                <h3 className='text-center my-5'>Placed-Order List</h3>
                 <table className="table">
                     <thead id='thead' className="bg-light">
                         <tr>

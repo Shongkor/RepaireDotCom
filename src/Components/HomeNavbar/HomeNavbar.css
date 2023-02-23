@@ -1,5 +1,27 @@
+.NavContainer{
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 5;
+}
 .nav-item{
     padding-left: 1em;
     font-size: large;
     font-weight: 500;
 }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+/* .LogInOut a{
+    background-color: aliceblue;
+    padding-right: 20px !important;
+    border-radius: 30%;
+} */
+=======
+.LogInOut a{
+    background-color: aliceblue;
+    padding-right: 20px !important;
+    border-radius: 30%;
+}
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e

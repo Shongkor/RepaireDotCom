@@ -4,12 +4,12 @@ import AdminOrderList from './AdminOrderList/AdminOrderList';
 
 const Admin = () => {
     return (
-        <div className="container">
+        <div>
             <div className='row'>
-                <div className="col-md-3">
+                <div className="col-md-2 position-fixed sidebar">
                     <AdminNavbar></AdminNavbar>
                 </div>
-                <div className="col-md-9">
+                <div className="col-md-10 ml-auto">
                     <AdminOrderList></AdminOrderList>
                 </div>
             </div>

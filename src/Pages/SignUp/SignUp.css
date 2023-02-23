@@ -1,0 +1,26 @@
+
+.inputField{
+    height: 40px;
+    width: 60%;
+    margin: 19px;
+    border: 1px solid rgb(78, 55, 11);
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+
+.google{
+    color: rgb(30, 253, 30);
+    font-size: 24px;
+    margin-right: 10px;
+}
+.success{
+    color: green;
+}
+.signUp{
+    color: black;
+}
+.signUpImg{
+    height: 40px;
+    width: 40px;
+}

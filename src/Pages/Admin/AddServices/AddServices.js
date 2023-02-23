@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
-import Navbar from '../../../Components/HomeNavbar/HomeNavbar';
 import AdminNavbar from '../../../Components/AdminNavbar/AdminNavbar';
 
 
@@ -15,7 +14,7 @@ const AddService = () => {
     const onSubmit = data => {
         const newData = { ...data, ...imgURL }
         // console.log(newData)
-        fetch('https://mysterious-woodland-64195.herokuapp.com/addService', {
+        fetch('http://localhost:5055/addService', {
             method: "POST",
             headers: { "Content-type": "application/json" },
             body: JSON.stringify(newData),
@@ -51,12 +50,12 @@ const AddService = () => {
 
     return (
         <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-2">
                 <AdminNavbar></AdminNavbar>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-10">
                 <div className="mt-3">
-                    <h1 className="text-center">Add Service Here</h1>
+                    <h2 className="text-center">Add Service Here</h2>
                     <div>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <label><strong>Service Name</strong> </label>

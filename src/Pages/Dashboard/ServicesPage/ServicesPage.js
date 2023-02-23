@@ -1,15 +1,12 @@
 import React from 'react';
-
 import Services from '../../Home/Services/Services';
 
-const Book = () => {
+const ServicesPage = () => {
     return (
         <div>
-            <div>
-                <Services></Services>
-            </div>
+            <Services />
         </div>
     );
 };
 
-export default Book;
+export default ServicesPage;

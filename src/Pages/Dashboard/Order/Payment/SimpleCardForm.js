@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { Link } from 'react-router-dom';
 
 const SimpleCardForm = ({handleCheckOut}) => {
     const stripe = useStripe();
@@ -51,7 +52,7 @@ const SimpleCardForm = ({handleCheckOut}) => {
             cardError && <p style={{color: 'red'}}>{cardError}</p>
             }
             {
-            cardSuccess && <p style={{color: 'green'}}>Payment Successful</p>
+            cardSuccess && <p style={{color: 'green'}}>Payment Successful</p> && <Link to="/add-review"><button className='btn btn-outline-info'>Add Review</button></Link>
             }
         </div>
         
