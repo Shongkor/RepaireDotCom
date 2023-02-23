@@ -3,6 +3,10 @@ import { useContext } from 'react';
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { UserContext } from '../../../App'
+<<<<<<< HEAD
+=======
+import HomeNavbar from '../../../Components/HomeNavbar/HomeNavbar';
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 import Payment from './Payment/Payment';
 
 
@@ -25,6 +29,11 @@ const Order = () => {
 
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     // console.log(loggedInUser)
+<<<<<<< HEAD
+=======
+
+    // console.log(info)
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 
     // console.log(info)
     let today = new Date()
@@ -34,7 +43,11 @@ const Order = () => {
             ...loggedInUser,
             ...selectedService,
             paymentId,
+<<<<<<< HEAD
             orderTime: date,
+=======
+            orderTime: new Date(),
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
         }
         fetch("http://localhost:5055/pay", {
             method: 'POST',
@@ -54,6 +67,10 @@ const Order = () => {
     return (
 
         <div>
+<<<<<<< HEAD
+=======
+            <HomeNavbar />
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
             <div className="container mt-5 pt-3 text-center">
                 <h3 className='mb-5'>Please Checkout for this service</h3>
                 <table className="table table-striped">

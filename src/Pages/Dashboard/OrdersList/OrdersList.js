@@ -3,6 +3,10 @@ import { useState } from 'react';
 import { useContext } from 'react';
 import { useEffect } from 'react';
 import { UserContext } from '../../../App';
+<<<<<<< HEAD
+=======
+import HomeNavbar from '../../../Components/HomeNavbar/HomeNavbar';
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 
 
 const OrdersList = () => {
@@ -21,6 +25,10 @@ const OrdersList = () => {
     return (
 
         <div>
+<<<<<<< HEAD
+=======
+            <HomeNavbar />
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
             <h6 className='text-center my-5'>{loggedInUser.name} Orders History</h6>
             <div className="container my-5">
                 <div className="row">

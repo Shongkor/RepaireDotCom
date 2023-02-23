@@ -1,7 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../App';
+<<<<<<< HEAD
 import { CgProfile } from 'react-icons/cg';
+=======
+<<<<<<< HEAD
+import { CgProfile } from 'react-icons/cg';
+=======
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 import logo from '../../Images/fixoria.png';
 import './HomeNavbar.css';
 
@@ -28,9 +35,15 @@ const HomeNavbar = () => {
     }, [loggedInUser.email])
 
     return (
+<<<<<<< HEAD
         <div className='NavContainer'>
             <nav className="navbar navbar-expand-lg navbar-light text-center">
                 <div className="container">
+=======
+        <div>
+            <nav className="navbar navbar-expand-lg navbar-light bg-white text-center">
+                <div className="container ">
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
                     <Link to='/' className='navbar-brand '><img src={logo} style={{ height: '50px' }} alt="" /></Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,6 +66,10 @@ const HomeNavbar = () => {
                                         <Link className="nav-link" to="/dashboard">Dashboard</Link>
                                 }
                             </li>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
                             <li class="dropdown LogInOut nav-item">
                                 <li class="" data-toggle="dropdown">
                                     <CgProfile />
@@ -69,6 +86,17 @@ const HomeNavbar = () => {
                                     </li>
                                     { loggedInUser.email &&<li className='nav-item'><Link className="nav-link" to='/add-review'>Add Reviews</Link></li>}
                                 </ul>
+<<<<<<< HEAD
+=======
+=======
+                            <li className="nav-item LogInOut">
+                                <Link className="nav-link" to='/login'>
+                                    {loggedInUser.email ? 
+                                    <li className='nav-item'>{"Log Out"}</li> 
+                                    : <li className='nav-item'>{"Log In"}</li>}
+                                </Link>
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
                             </li>
                             
 

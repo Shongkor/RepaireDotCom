@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
+<<<<<<< HEAD
+=======
+import HomeNavbar from '../../../Components/HomeNavbar/HomeNavbar';
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 
 
 
@@ -48,7 +52,12 @@ const AddReview = () => {
     }
 
     return (
+<<<<<<< HEAD
         <div className='my-5'>
+=======
+        <div>
+            <HomeNavbar />
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
             <div className="container">
                 <div className="">
                     <div className="mt-3">

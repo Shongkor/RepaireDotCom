@@ -93,10 +93,18 @@ const SignUp = () => {
 
     return (
 
+<<<<<<< HEAD
 
         <div className='mb-5'>
             <div className="text-center regFormColor py-3">
                 <h3 className='signUp'> <img src="./sign-up-icon-5.png" alt="icon" className='signUpImg' /> Sign Up </h3>
+=======
+            
+            <div className=''>
+                <HomeNavbar />
+                <div className="text-center regFormColor py-3">
+                    <h3 className='signUp'> <img src="./sign-up-icon-5.png" alt="icon" className='signUpImg'/> Sign Up </h3>
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
 
                 <form onSubmit={handleCreateAccount}>
                     <input className="inputField" type="text" name="name" onBlur={handleBlur} placeholder='Enter your Name' required />
@@ -114,11 +122,20 @@ const SignUp = () => {
 
 
                 <div>
+<<<<<<< HEAD
                     <p className="text-primary" >
                         Or
                     </p>
                     <button className="btn btn-outline-success" onClick={handleGoogleSignIn}><FaGoogle className="google"></FaGoogle> Google Sign in</button>
                 </div>
+=======
+                <p className = "text-primary" >
+                    Or
+                </p>
+                <button className="btn btn-outline-success" onClick={handleGoogleSignIn}><FaGoogle className="google"></FaGoogle> Google Sign in</button>
+            </div>
+            </div>
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
             </div>
         </div>
 

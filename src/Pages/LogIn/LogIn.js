@@ -87,14 +87,30 @@ const LogIn = () => {
                 var errorMessage = error.message;
                 var email = error.email;
                 var credential = error.credential;
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
                 console.log(errorMessage,errorCode,email,credential)
 
+=======
+                // ...
+                console.log("LogIn Fail",errorCode,errorMessage,email,credential);
+>>>>>>> fcfd1f23770bbe33ebf092fce8e0c8814a5d7896
             });
 
     }
     return (
+<<<<<<< HEAD
        
                     <div className="loginComponent mb-5">
+=======
+        <div className="">
+            <HomeNavbar />
+            <div>
+                <div>
+                    <div className="loginComponent">
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
                         <div className="text-center loginStyle">
                             <h2 className="text-muted"> <i class="bi bi-box-arrow-in-right text-muted"></i> Log In </h2>
                             <form onSubmit={handleLogIn}>
@@ -113,7 +129,13 @@ const LogIn = () => {
                             <button className="btn btn-outline-success" onClick={handleGoogleSignIn}><FaGoogle className="google"></FaGoogle> Google Sign in</button>
                         </div>
                     </div>
+<<<<<<< HEAD
 
+=======
+                </div>
+            </div>
+        </div>
+>>>>>>> 21dc79c804d487aa6a7a9fb6bfaa9f9958ca894e
     );
 };
 
