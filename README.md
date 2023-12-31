@@ -1,6 +1,6 @@
 # RepaireDotCom
 
-[Live Link](https://repaire-6d126.web.app/)
+
 
 
 The name of this website is 'RepaireDotCom'. From here you can Order Service For repaireing. 
